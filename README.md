@@ -18,14 +18,14 @@ Execute from the root directory:
  ln -s `find $PWD -name ".bash_profile"` ~/.bash_profile
 ```
 
-# Usefull terminal tools
+# Tools
 
 ## Peco
 
 Great tool to chain / pipe commands which allows you to make a decission in the middle of commands chain
 `https://github.com/peco/peco`
 
-# First Installation of Postgresql
+## PG gem
 When working with a clean instance of Mac OS you probably don't have the Postgresql client installed.
 During the first attempt to install the `pg` gem it will fail, because of missing build libraries.
 I prefer not to install the Postgres Client at all, so in order to work around it you can:
@@ -44,7 +44,25 @@ Bundle:
 
 It should not fail on Postgres anymore ;)
 
-# Enable Auto complete with Git
+## Dekstop App for Docker
+Current version: `https://hub.docker.com/editions/community/docker-ce-desktop-mac/`
+
+## Local Postgres
+I prefer to run Postgres via Docker.
+In order to start a Docker Container with latest Postgres (you may have to specifiy a version for you project).
+Don't forget to change the `PASSWORD` and `NAME` for the Super User
+
+`docker run -d --restart unless-stopped -p 5432:5432 -e POSTGRES_PASSWORD=PASSWORd -e POSTGRES_USER=NAME postgres`
+
+To connect to your brand ne Postgres instance use:
+`psql -U maw -W -h localhost -p 5432`
+
+In case that the system does not recognise the `psql` command, you have to link it from Libraries we installed earlier:
+`brew link --force libpq`
+
+# Quality of Life improvements
+
+## Enable Auto complete with Git
 
 Source: `https://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line`
 
