@@ -92,6 +92,11 @@ export HISTCONTROL=ignoredups:erasedups
 #  instead of overwriting it
 shopt -s histappend
 
+# Enable Git Autocomplete
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 # After each command, append to the history file 
 #  and reread it
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"

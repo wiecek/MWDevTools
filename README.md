@@ -43,3 +43,10 @@ Bundle:
 `bundle install`
 
 It should not fail on Postgres anymore ;)
+
+# Enable Auto complete with Git
+
+Source: `https://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line`
+
+1. Run `curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash`
+2. Restart Terminal (necessary changes in `.bash_profile` where already made)
