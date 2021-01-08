@@ -30,7 +30,7 @@ alias gaa='git add .'
 alias gaaa='git add --all'
 alias gau='git add --update'
 alias gb='git branch'
-alias gbd='git branch -l | peco | args -n 1 git branch --delete '
+alias gbd='git branch -l | peco | xargs -n 1 git branch --delete '
 alias gc='git commit'
 alias gcm='git commit --message'
 alias gcf='git commit --fixup'
@@ -79,7 +79,7 @@ function glf() { git log --all --grep="$1"; }
 # ----------------------
 # Convenience Functions
 # ----------------------
-function vsc() { open "$1" -a "Visual Studio Code"; }
+function code() { open "$1" -a "Visual Studio Code"; }
 function xc() { ruby ~/bin/xc .; }
 
 # Maximum number of history lines in memory

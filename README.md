@@ -52,7 +52,7 @@ I prefer to run Postgres via Docker.
 In order to start a Docker Container with latest Postgres (you may have to specifiy a version for you project).
 Don't forget to change the `PASSWORD` and `NAME` for the Super User
 
-`docker run -d --restart unless-stopped -p 5432:5432 -e POSTGRES_PASSWORD=PASSWORd -e POSTGRES_USER=NAME postgres`
+`docker run -d --restart unless-stopped -p 5432:5432 -e POSTGRES_PASSWORD=PASSWORD -e POSTGRES_USER=NAME postgres`
 
 To connect to your brand ne Postgres instance use:
 `psql -U maw -W -h localhost -p 5432`
